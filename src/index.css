@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-indigo-900 via-blue-900 to-blue-800 text-gray-100 min-h-screen;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+  
+  .weather-icon {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+  }
+  
+  .search-input {
+    @apply bg-white/10 border-white/20 text-white placeholder-gray-300 
+           focus:ring-2 focus:ring-blue-400 focus:border-transparent;
+  }
+  
+  .forecast-card {
+    @apply glass-card hover:bg-white/20 transition-all duration-300 
+           transform hover:-translate-y-1;
+  }
+}
